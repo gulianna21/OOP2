@@ -1,6 +1,11 @@
 public class Cat extends Animals {
+    public static int countCats;
     public static final int MAX_RUN = 200;
     protected String name;
+
+    public Cat(){
+        ++countCats;
+    }
 
     @Override
     void swim(int param) {
@@ -15,5 +20,9 @@ public class Cat extends Animals {
     @Override
     public void voice() {
         System.out.println("Cat voice miy");
+    }
+
+    public int getCountCats() {
+        return countCats;
     }
 }
